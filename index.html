@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -18,24 +18,32 @@
                 </div>
             </div>
             <div class="buttons">
-                <div class="numbers">
-                    <button value="7">7</button>
-                    <button value="8">8</button>
-                    <button value="9">9</button>
-                    <button value="4">4</button>
-                    <button value="5">5</button>
-                    <button value="6">6</button>
-                    <button value="1">1</button>
-                    <button value="2">2</button>
-                    <button value="3">3</button>
-                    <button value="0" id="btn0">0</button>
-                    <button value=",">,</button>
+                <div class="top-buttons">
+                    <button id="func" onclick="setNum()" value="percent">%</button>
+                    <button id="func" onclick="DeleteLast()" value="CE">CE</button>
+                    <button id="func" onclick="DeleteAll()" value="C">C</button>
+                    <button id="operator" onclick="setOperator()" value="div">÷</button>
                 </div>
-                <div class="operations">
-                    <button value="div">/</button>
-                    <button value="mult">*</button>
-                    <button value="sub">-</button>
-                    <button value="sum">+</button>
+                <div class="bottom-buttons">
+                    <div class="numbers">
+                        <button id="number" onclick="setNum()" value="7">7</button>
+                        <button id="number" onclick="setNum()" value="8">8</button>
+                        <button id="number" onclick="setNum()" value="9">9</button>
+                        <button id="number" onclick="setNum()" value="4">4</button>
+                        <button id="number" onclick="setNum()" value="5">5</button>
+                        <button id="number" onclick="setNum()" value="6">6</button>
+                        <button id="number" onclick="setNum()" value="1">1</button>
+                        <button id="number" onclick="setNum()" value="2">2</button>
+                        <button id="number" onclick="setNum()" value="3">3</button>
+                        <button id="number" id="btn0" onclick="setNum()" value="0">0</button>
+                        <button id="number" onclick="setNum()" value=",">,</button>
+                    </div>
+                    <div class="side-operations">
+                        <button id="operator" onclick="setOperator()" value="mult">*</button>
+                        <button id="operator" onclick="setOperator()" value="sub">-</button>
+                        <button id="operator" onclick="setOperator()" value="sum">+</button>
+                        <button id="equal" onclick="operate()" value="equal">=</button>
+                    </div>
                 </div>
             </div>
         </div>
